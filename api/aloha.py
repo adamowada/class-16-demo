@@ -21,7 +21,10 @@ class handler(BaseHTTPRequestHandler):
         age = dictionary.get("age")
         print("name is:", name)
 
-        message = f"Aloha {name}, you are {age} years old"
+        if name and age:
+            message = f"Aloha {name}, you are {age} years old"
+        else:
+            message = "Aloha stranger!"
 
         # Forming the response
         self.send_response(200)  # HTTP code
