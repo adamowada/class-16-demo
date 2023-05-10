@@ -9,4 +9,3 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/plain')  # define the content type
         self.end_headers()  # add a blank line
         self.wfile.write(message.encode())  # write the message
-        
